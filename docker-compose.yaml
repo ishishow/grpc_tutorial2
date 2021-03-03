@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  envoy:
+    image: envoyproxy/envoy:v1.13.1
+    volumes:
+      - "./envoy:/etc/envoy"
+    expose:
+      - 51051
+    ports:
+      - 51051:51051

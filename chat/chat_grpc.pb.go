@@ -43,6 +43,7 @@ func (c *chatServiceClient) SayHello(ctx context.Context, in *MessageRequest, op
 // for forward compatibility
 type ChatServiceServer interface {
 	SayHello(context.Context, *MessageRequest) (*MessageResponse, error)
+	mustEmbedUnimplementedChatServiceServer()
 }
 
 // UnimplementedChatServiceServer must be embedded to have forward compatible implementations.
